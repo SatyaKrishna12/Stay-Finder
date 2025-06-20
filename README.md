@@ -4,7 +4,7 @@
 
 ## 🌐 Live Demo
 
-> 🔗 [https://stayfinder-app.example.com](https://stayfinder-app.example.com) *(if deployed)*
+> 🔗 https://stay-finder-1-c24n.onrender.com/
 
 
 ## 🔧 Features
