@@ -45,15 +45,15 @@
 ## 📁 Project Structure
 
 ### Backend
-StayFinder/
-├── backend/
-│ ├── models/
-│ ├── routes/
-│ ├── middleware/
-│ ├── utils/
-│ ├── cloudConfig.js
-│ ├── server.js
-│ └── .env
+StayFinder/<br>
+├── backend/<br>
+│ ├── models/<br>
+│ ├── routes/<br>
+│ ├── middleware/<br>
+│ ├── utils/<br>
+│ ├── cloudConfig.js<br>
+│ ├── server.js<br>
+│ └── .env<br>
 
 
 ### Frontend
