@@ -19,7 +19,7 @@ const dbUrl = process.env.ATLAS_DB;
 require("dotenv").config();
 
 app.use(express.json());
-app.use(cors({ origin: 'https://stay-finder-pj4p.onrender.com', credentials: true }));
+app.use(cors({ origin: 'https://stay-finder-1-c24n.onrender.com/', credentials: true }));
 app.use(cookieParser());
 main()
   .then((res) => {
