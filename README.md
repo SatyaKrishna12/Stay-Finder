@@ -69,9 +69,9 @@ StayFinder/<br>
 ---
 
 ### Setup Backend
-
-`cd backend `
-`npm install`
+```bash
+cd backend
+npm install
 
 
 
