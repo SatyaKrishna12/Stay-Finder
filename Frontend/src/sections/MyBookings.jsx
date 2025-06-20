@@ -16,7 +16,7 @@ const MyBookings = () => {
     }
 
     if (user?._id) {
-      fetch(`http://localhost:3000/bookings/${user._id}`, {
+      fetch(`https://stay-finder-pj4p.onrender.com/bookings/${user._id}`, {
         credentials: 'include',
       })
         .then((res) => res.json())
@@ -36,7 +36,7 @@ const MyBookings = () => {
 
   const handleCancelBooking = async (bookingId) => {
     try {
-      const res = await fetch(`http://localhost:3000/bookings/${bookingId}`, {
+      const res = await fetch(`https://stay-finder-pj4p.onrender.com/bookings/${bookingId}`, {
         method: 'DELETE',
         credentials: 'include',
       });

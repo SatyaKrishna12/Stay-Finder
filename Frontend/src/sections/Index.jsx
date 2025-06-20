@@ -12,7 +12,7 @@ const Index = () => {
   useEffect(() => {
     const fetchListings = async () => {
       try {
-        const res = await fetch("http://localhost:3000/listing");
+        const res = await fetch("https://stay-finder-pj4p.onrender.com/listing");
         const data = await res.json();
         setFeaturedListings(data.slice(0, 4));
       } catch (error) {

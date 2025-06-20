@@ -42,7 +42,7 @@ const userId = user?._id;
   useEffect(() => {
     const fetchHotel = async () => {
       try {
-        const res = await fetch(`http://localhost:3000/listing/${id}`);
+        const res = await fetch(`https://stay-finder-pj4p.onrender.com/listing/${id}`);
         if (!res.ok) {
           throw new Error("Failed to fetch listing");
         }
@@ -64,7 +64,7 @@ const userId = user?._id;
   const handleDelete = async() => {
    if (window.confirm("Are you sure you want to delete this listing?")) {
     try {
-      const res = await fetch(`http://localhost:3000/listing/${id}`, {
+      const res = await fetch(`https://stay-finder-pj4p.onrender.com/listing/${id}`, {
         method: "DELETE",
         credentials: "include",
       });
@@ -240,7 +240,7 @@ const userId = user?._id;
   <Button
     className="w-full bg-red-600 hover:bg-red-700 text-lg py-3"
     onClick={() => {
-      fetch(`http://localhost:3000/listing/${id}`, {
+      fetch(`https://stay-finder-pj4p.onrender.com/listing/${id}`, {
         method: 'DELETE',
         credentials: 'include',
       })

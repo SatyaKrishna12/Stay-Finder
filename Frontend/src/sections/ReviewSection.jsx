@@ -9,7 +9,7 @@ const ReviewSection = ({ listingId }) => {
   useEffect(() => {
     const fetchReviews = async () => {
       try {
-        const res = await fetch(`http://localhost:3000/reviews/listing/${listingId}`, {
+        const res = await fetch(`https://stay-finder-pj4p.onrender.com/reviews/listing/${listingId}`, {
           credentials: 'include',
         });
         const data = await res.json();

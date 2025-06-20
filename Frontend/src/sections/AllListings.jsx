@@ -9,7 +9,7 @@ const AllListings = () => {
 
   const fetchApi = async () => {
     try {
-      const res = await fetch("http://localhost:3000/listing");
+      const res = await fetch("https://stay-finder-pj4p.onrender.com/listing");
       const data = await res.json();
       setListingData(data);
       setFilteredListings(data); 

@@ -65,7 +65,7 @@ const AddListing = () => {
     formPayload.append('image', formData.image);
     formPayload.append('host', user._id);
 
-    const res = await fetch('http://localhost:3000/listing', {
+    const res = await fetch('https://stay-finder-pj4p.onrender.com/listing', {
       method: 'POST',
       credentials: 'include',
       body: formPayload,

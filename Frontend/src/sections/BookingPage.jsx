@@ -18,7 +18,7 @@ const BookingPage = () => {
   useEffect(() => {
     const fetchListing = async () => {
       try {
-        const res = await fetch(`http://localhost:3000/listing/${id}`);
+        const res = await fetch(`https://stay-finder-pj4p.onrender.com/listing/${id}`);
         const data = await res.json();
         setListing(data);
       } catch (err) {
@@ -51,7 +51,7 @@ const BookingPage = () => {
     const totalPrice = totalNights * listing.price;
 
     try {
-      const response = await fetch('http://localhost:3000/bookings', {
+      const response = await fetch('https://stay-finder-pj4p.onrender.com/bookings', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

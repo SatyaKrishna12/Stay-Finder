@@ -11,7 +11,7 @@ export const AuthProvider = ({ children }) => {
   const checkAuthStatus = useCallback(async () => {
     setLoading(true);
     try {
-      const res = await axios.get('http://localhost:3000/auth/status', {
+      const res = await axios.get('https://stay-finder-pj4p.onrender.com/auth/status', {
         withCredentials: true,
       });
       if (res.data.loggedIn) {
@@ -28,7 +28,7 @@ export const AuthProvider = ({ children }) => {
 
   const logout = async () => {
     try {
-      await axios.post('http://localhost:3000/logout', {}, { withCredentials: true });
+      await axios.post('https://stay-finder-pj4p.onrender.com/logout', {}, { withCredentials: true });
       setUser(null);
     } catch (err) {
       console.error('Logout error', err);

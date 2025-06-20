@@ -22,7 +22,7 @@ const Register = () => {
     setIsLoading(true);
 
     try {
-      const res = await fetch('http://localhost:3000/signup', {
+      const res = await fetch('https://stay-finder-pj4p.onrender.com/signup', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

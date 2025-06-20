@@ -33,7 +33,7 @@ const AddReview = () => {
     }
 
     try {
-      const res = await fetch(`http://localhost:3000/reviews/${listingId}`, {
+      const res = await fetch(`https://stay-finder-pj4p.onrender.com/reviews/${listingId}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         credentials: 'include',

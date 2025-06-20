@@ -18,7 +18,7 @@ const MyReviews = () => {
     
          if (!user?._id) return;
       try {
-        const res = await fetch(`http://localhost:3000/reviews/user/${user._id}`, {
+        const res = await fetch(`https://stay-finder-pj4p.onrender.com/reviews/user/${user._id}`, {
           credentials: 'include',
         });
         const data = await res.json();
