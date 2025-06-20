@@ -58,13 +58,22 @@ StayFinder/<br>
 
 ### Frontend
 
-StayFinder/
-├── frontend/
-│ ├── components/
-│ ├── pages/
-│ ├── hooks/
-│ ├── App.jsx
-│ └── main.jsx
+StayFinder/<br>
+├── frontend/<br>
+│ ├── components/<br>
+│ ├── pages/<br>
+│ ├── hooks/<br>
+│ ├── App.jsx<br>
+│ └── main.jsx<br>
+
+---
+
+### Setup Backend
+
+`cd backend
+npm install`
+
+
 
 
 
