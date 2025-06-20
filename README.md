@@ -6,20 +6,6 @@
 
 > 🔗 [https://stayfinder-app.example.com](https://stayfinder-app.example.com) *(if deployed)*
 
----
-
-## 📸 Screenshots
-
-*Home Page*
-![Homepage Screenshot](./screenshots/home.png)
-
-*Listing Details*
-![Listing Details](./screenshots/listing-details.png)
-
-*Add New Listing*
-![Add Listing](./screenshots/add-listing.png)
-
----
 
 ## 🔧 Features
 
