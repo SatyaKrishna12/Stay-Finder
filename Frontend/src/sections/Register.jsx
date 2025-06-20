@@ -37,7 +37,7 @@ const Register = () => {
       }
 
      toast.success('Registration successful!'); 
-      navigate('/listing');
+      navigate('/login');
     } catch (err) {
       toast.error(err.message || 'Something went wrong'); 
     } finally {

@@ -6,15 +6,20 @@ const AllListings = () => {
   const [listingData, setListingData] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
   const [filteredListings, setFilteredListings] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   const fetchApi = async () => {
     try {
-      const res = await fetch("https://stay-finder-pj4p.onrender.com/listing");
+      const res = await fetch("https://stay-finder-pj4p.onrender.com/listing", {
+        credentials: 'include',
+      });
       const data = await res.json();
       setListingData(data);
-      setFilteredListings(data); 
+      setFilteredListings(data);
     } catch (err) {
       console.error("Failed to fetch listings:", err);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -30,6 +35,16 @@ const AllListings = () => {
       listing.description.toLowerCase().includes(term.toLowerCase())
     );
     setFilteredListings(filtered);
+  };
+
+  const renderSkeletons = () => {
+    return Array.from({ length: 6 }).map((_, index) => (
+      <div key={index} className="bg-white rounded-lg shadow p-4 animate-pulse">
+        <div className="h-48 bg-gray-300 rounded mb-4"></div>
+        <div className="h-4 bg-gray-300 rounded w-3/4 mb-2"></div>
+        <div className="h-4 bg-gray-300 rounded w-1/2"></div>
+      </div>
+    ));
   };
 
   return (
@@ -59,7 +74,11 @@ const AllListings = () => {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {filteredListings.length > 0 ? (
+        {loading ? (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6">
+            {renderSkeletons()}
+          </div>
+        ) : filteredListings.length > 0 ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6">
             {filteredListings.map((listing) => (
               <ListingCard key={listing._id} listing={listing} />
