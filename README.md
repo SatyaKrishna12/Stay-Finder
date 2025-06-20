@@ -74,14 +74,7 @@ cd backend
 npm install
 ```
 
-### Create a .env file in the backend/ directory with:
-PORT=5000
-MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=your_jwt_secret
-CLOUD_NAME=your_cloudinary_cloud_name
-CLOUD_API_KEY=your_cloudinary_api_key
-CLOUD_API_SECRET=your_cloudinary_api_secret
-<br>
+
 # Start the backend server:
 ``` bash
 npm run dev
@@ -93,7 +86,5 @@ npm run dev
 -Listings are created with req.file for the image
 -Images are stored on Cloudinary and URLs are saved in MongoDB
 
-### 🧑‍💻 Author
-Made with ❤️ by Satya Krishna
 
 
